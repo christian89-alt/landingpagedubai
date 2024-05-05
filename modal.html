@@ -1,10 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investir à Dubai|Demande de brochure</title>
-    <link rel="stylesheet" href="css/modal.css">
+    <meta charset="utf-8">
+    <title>Dubai investissements | investissements Dubai</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--EmailJs-->
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+  ></script>
+
+    <script src="lib/index.js"></script> 
+<script>
+    (function() {
+    
+        emailjs.init({
+          publicKey: "eguw725OFW2zMMEq4",
+        });
+    })();
+    
+</script>
+
+ <!--Modal-->
+<script src="lib/modal.js" ></script>
+    
+
 </head>
 <body>
 
@@ -15,31 +61,39 @@
         <div class="modal-body">
           
           <!--FORM-->
-          
-          <form id="form" name="reserve" action="index.html" method="get">
-          
-            <!-- FIRST NAME -->
-          
-            <div class="formData" data-error="Vous devez entrer 2 caractères ou plus." data-error-visible="false">
-              <label for="first">Prénom</label><br>
-              <input class="text-control success" type="text" id="first" name="first" minlength="2"
-                placeholder="Prénom" required /><br>
+
+          <form id="contact-form">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="name" placeholder="Insérer votre nom">
+                        <label for="name" id="name">Votre nom </label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="email" placeholder="Insérer votre Email">
+                        <label for="email" id="email">Votre email</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="subject" placeholder="Le sujet de votre demande de contact">
+                        <label for="subject" id="sujet">Sujet</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Expliquez nous votre projet succintement ..." id="message" style="height: 150px"></textarea>
+                        <label for="message" id="message">Message</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary w-100 py-3" onclick="sendForm"  type="submit">Envoyer</button>
+                </div>
             </div>
-            <!-- LAST NAME -->
-            <div class="formData" data-error="Vous devez entrer 2 caractères ou plus." data-error-visible="false">
-              <label for="last">Nom</label><br>
-              <input class="text-control" type="text" id="last" name="last" placeholder="Nom" required/><br>
-            </div>
-            <!-- EMAIL -->
-            <div class="formData" data-error="Vous devez entrer une adresse email valide." data-error-visible="false">
-              <label for="email">E-mail</label><br>
-              <input class="text-control" type="email" id="email" name="email" placeholder="exemple@email.com" required/><br>
-            </div>
-            <div class="formData" data-error="Vous devez entrer une adresse email valide." data-error-visible="false">
-              <label for="email">E-mail</label><br>
-              <input class="text-control" type="tel" id="phone" name="phone" placeholder="Votre numéro de télephone"  required/><br>
-            </div>
-            </div>
+        </form>
+    
             <!-- TERMS OF USE -->
             <div class="formData" data-error="Vous devez accepter les conditions d'utilisation."
               data-error-visible="false">
@@ -74,6 +128,10 @@
         </button>
       </div>
     </div>
+
+    <script src="lib/modal.js"></script>
+    <script src="lib/formFieldsValidation.js"></script>
+    <script src="lib/confirmation_submission.js"></script>
     
 </body>
 </html>
